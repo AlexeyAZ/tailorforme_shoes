@@ -1,0 +1,237 @@
+.sec3 {
+    background-color: $gray-bg;
+    padding: 100px 0;
+
+    @include media(w1024) {
+        padding: 60px 0;
+    }
+
+    &__heading {
+        margin-bottom: 50px;
+
+        @include media(w768) {
+            margin-bottom: 30px;
+        }
+
+        @include media(w600) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__quote {
+        margin: 0 auto;
+        max-width: 720px;
+    }
+
+    &__row {
+        margin-top: 100px;
+
+        @include media(w768) {
+            margin-top: 50px;
+        }
+    }
+
+    &__img-container {
+        padding-left: 50px;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        text-align: center;
+        width: calc(50vw - 10px);
+
+        @include media(w1024) {
+            padding-left: 0;
+            position: static;
+            width: auto;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        max-width: 824px;
+        width: 100%;
+
+        @include media(w1024) {
+            //width: 100%;
+        }
+    }
+
+    &__bottom-container {
+
+        @include media(w600) {
+            text-align: center;
+        }
+    }
+
+    &__gallery-wrap {
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    &__gallery-container {
+        padding: 0;
+    }
+
+    &__gallery {
+
+        .slick-list {
+            overflow: visible;
+            padding: 0 !important;
+        }
+    }
+
+    &__gallery-arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 50px;
+        z-index: 2;
+        
+        &:before,
+        &:after {
+            transform: translateY(-50%);
+            content: "";
+            position: absolute;
+            top: 50%;
+        }
+
+        &:before {
+            background-color: rgba(0,0,0,0.5);
+            height: 86px;
+            width: 38px;
+        }
+
+        &:after {
+            border-left: 2px solid white;
+            border-bottom: 2px solid white;
+            height: 16px;
+            width: 16px;
+        }
+
+        &_left {
+            left: 10px;
+
+            @include media(w768) {
+                left: 0;
+            }
+
+            &:before {
+                border-radius: 0 4px 4px 0;
+            }
+
+            &:after {
+                transform: translate(-50%, -50%) rotate(45deg);
+                left: 45%;
+            }
+        }
+
+        &_right {
+            right: 10px;
+
+            @include media(w768) {
+                right: 0;
+            }
+
+            &:before {
+                border-radius: 4px 0 0 4px;
+                right: 0;
+            }
+
+            &:after {
+                transform: translate(50%, -50%) rotate(225deg);
+                right: 45%;
+            }
+        }
+    }
+
+    &__gallery-item {
+        margin-bottom: 0;
+        padding: 0 10px;
+        outline: none;
+
+        @include media(w768) {
+            padding: 0;
+        }
+    }
+
+    &__gallery-img {
+        display: block;
+        width: 100%;
+    }
+
+    &__description {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    &__description-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 47%;
+
+        &:nth-child(odd) {
+            margin-right: 6%;
+
+            @include media(w1024) {
+                margin-right: 0;
+            }
+        }
+
+        @include media(w1024) {
+            width: 100%
+        }
+
+        @include media(w600) {
+            flex-direction: column;
+        }
+    }
+
+    &__description-img {
+        flex-shrink: 0;
+        margin-right: 15px;
+        opacity: 0.5;
+
+        @include media(w768) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__description-text-wrap {
+        flex-shrink: 1;
+        color: #5f5f5f;
+        font-family: "PTSerif", sans-serif;
+        font-style: italic;
+        font-size: 21px;
+
+        @include media(w768) {
+            font-size: 18px;
+        }
+
+        @include media(w600) {
+            text-align: center;
+        }
+    }
+
+    &__description-text {
+        line-height: 1;
+
+        &_number {
+            font-size: 44px;
+        }
+
+        &_bold {
+            font-family: "PTSerif", sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            color: #5f5f5f;
+        }
+    }
+}

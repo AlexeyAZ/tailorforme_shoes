@@ -1,0 +1,34 @@
+.info-window {
+    background-color: white;
+    position: relative;
+    padding: 60px 55px;
+
+    @include media(w768) {
+        padding: 40px;
+    }
+
+    &:before {
+        content: "";
+        border: 1px solid #dfdfdf;
+        pointer-events: none;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: 100%;
+        width: 100%;
+
+        @include media(w768) {
+            height: calc(100% - 40px);
+            width: calc(100% - 40px);
+        }
+    }
+
+    &__title {
+        font-family: "Lora", sans-serif;
+        font-size: 30px;
+
+        @include media(w1366) {
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.sec7 {
+	background-image: url("../img/sec7-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 80px;
+	padding-bottom: 350px;
+
+	@include media(w1024) {
+		padding-bottom: 200px;
+	}
+
+	@include media(w768) {
+		padding-top: 50px;
+		padding-bottom: 150px;
+	}
+
+	&__window-wrapper {
+		
+		@include media(w600) {
+			text-align: center;
+		}
+	}
+
+	&__heading {
+		margin-bottom: 50px;
+	}
+
+	&__gallery-item {
+		outline: none;
+	}
+
+	&__gallery-heading {
+		font-family: "Lora", sans-serif;
+		font-size: 28px;
+		font-weight: bold;
+		margin-bottom: 20px;
+
+		@include media(w600) {
+			font-size: 24px;
+		}
+	}
+
+	&__gallery-text {
+		font-family: "PTSerif", sans-serif;
+		font-size: 21px;
+		font-style: italic;
+
+		@include media(w600) {
+			font-size: 18px;
+		}
+	}
+
+	&__gallery-dots-wrap {
+		margin-top: 60px;
+
+		@include media(w1024) {
+			display: block;
+		}
+
+		@include media(w600) {
+			display: inline-block;
+		}
+	}
+}

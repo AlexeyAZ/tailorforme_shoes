@@ -1,0 +1,322 @@
+extends templates/layout
+
+block vars
+    - var title = 'Tailor For Me'
+
+block content
+    div#politicWindow.politic.
+        Политика
+    div.modal-win.modal-win_form
+        div.modal-win__container
+            div.modal-win__close
+            p.modal-win__heading.
+                Записаться на снятие мерок
+            form.modal-win__form
+                label.sec9__form-label.modal-win__label
+                    |Дата
+                    input.sec9__form-input.modal-win__input.modal-win__input_date(type="text" name="date" readonly="true")
+                label.sec9__form-label.modal-win__label
+                    |Время
+                    select.sec9__form-input.sec9__form-input_time.modal-win__input(type="" name="time")
+                        option.sec9__form-option.
+                            10:00-11:00
+                        option.sec9__form-option.
+                            11:00-12:00
+                        option.sec9__form-option.
+                            12:00-13:00
+                        option.sec9__form-option.
+                            13:00-14:00
+                        option.sec9__form-option.
+                            14:00-15:00
+                        option.sec9__form-option.
+                            15:00-16:00
+                        option.sec9__form-option.
+                            16:00-17:00
+                        option.sec9__form-option.
+                            17:00-18:00
+                        option.sec9__form-option.
+                            18:00-19:00
+                        option.sec9__form-option.
+                            19:00-20:00
+                label.sec9__form-label.modal-win__label
+                    |Ваше имя
+                    input.sec9__form-input.modal-win__input(type="text" name="name")
+                label.sec9__form-label.modal-win__label
+                    |Телефон
+                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone")
+                button.modal-win__form-btn.
+                    Записаться
+
+    div.content
+        section.sec.intro
+            div.video-container
+                video.video(poster="img/intro-bg.jpg" id="bgvid" playsinline autoplay muted loop)
+                    source(src="video/video.webm" type="video/webm")
+            include templates/header
+            div.container.intro__container
+                p.heading.heading_xl.ta-center.color-white.intro__heading.
+                    Пошив обуви
+                p.heading.heading_m.ta-center.color-white.intro__subheading.
+                    по индивидуальным меркам
+                p.title.title_l.ta-center.color-white.
+                    С вниманием к каждой детали
+                div.intro__scroll-btn
+                    img(src="img/svg/icon-mouse.svg", alt="")
+        section.sec.sec2
+            div.container.sec2__container
+                div.sec2__container-text
+                    p.heading.heading_l.sec2__heading.
+                        Классические традиции<br> обувного ремесла 
+                    p.sec2__subtitle.
+                        Для создания комфортной<br> и уникальной пары вашей обуви
+                    div.sec2__btn-container
+                        p.title.title_s.sec2__title.color-link.
+                            Ручная работа и использование<br> качественных материалов
+                        a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                            Заказать пошив
+                    div.sec2__gallery-dots-wrap
+                        div#sec2GalleryDots.sec2__gallery-dots
+                        div.sec2__gallery-numbers
+                            div.sec2__gallery-number.sec2__gallery-number-now.
+                                1
+                            div.sec2__gallery-number.sec2__gallery-number-all
+                div.sec2__gallery-wrap
+                    div.sec2__gallery
+                        div.sec2__gallery-item
+                            img.sec2__gallery-img(src="img/slide2-gallery-img1.jpg", alt="")
+                        div.sec2__gallery-item
+                            img.sec2__gallery-img(src="img/slide2-gallery-img2.jpg", alt="")
+                        div.sec2__gallery-item
+                            img.sec2__gallery-img(src="img/slide2-gallery-img3.jpg", alt="")
+                div.sec2__gallery-dots-wrap.sec2__gallery-dots-wrap_mobile
+                    div#sec2GalleryDotsMobile.sec2__gallery-dots.sec2__gallery-dots_mobile
+                    div.sec2__gallery-numbers
+                        div.sec2__gallery-number.sec2__gallery-number-now.
+                            1
+                        div.sec2__gallery-number.sec2__gallery-number-all
+        section.sec.sec3
+            div.container.sec3__container
+                p.heading.heading_m.sec3__heading.ta-center.
+                    Создайте собственную<br> пару обуви
+                p.title.title_s.color-link.sec3__title.
+                    Студия индивидуального пошива &laquo;TAILOR&nbsp;ME&raquo; воплотит любые ваши идеи. Выберите вместе с&nbsp;портным модель, цвет кожии материал. Более 1&nbsp;000 вариаций создания удобной обуви с&nbsp;использованием самых качественных материалов.
+            div.sec3__gallery-wrap
+                div.container.sec3__gallery-container
+                    div#sec3__gallery.sec3__gallery
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/1.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/2.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/3.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/4.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/5.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/6.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/7.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/8.jpg", alt="")
+                    div#sec3__gallery-arrow-left.sec3__gallery-arrow.sec3__gallery-arrow_left
+                    div#sec3__gallery-arrow-right.sec3__gallery-arrow.sec3__gallery-arrow_right
+            div.container.sec3__bottom-container
+                div.sec3__description
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img1.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                                36 
+                            span.sec3__description-text.sec3__description-text_bold.
+                                моделей: 
+                            |от «Дерби» и «Оксфордов» до «Сникеров» и «Алгонкуин Бут»
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img2.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                                3 
+                            span.sec3__description-text.sec3__description-text_bold.
+                                разновидности конструкции подошвы: 
+                            |Goodyear Welted», «Blake», «Rubber»
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img3.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                                6 
+                            span.sec3__description-text.sec3__description-text_bold.
+                                видов колодок: 
+                            |от элегантной итальянской, до классической английской формы
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img4.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                                10 
+                            span.sec3__description-text.sec3__description-text_bold.
+                                цветовых комбинаций: 
+                            |переходы, сочетания – ограничено только вашей фантазией
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img5.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_bold.
+                                На все 4 сезона: 
+                            |натуральный мех или мягкий кашемир – для тепла зимой и осенью
+                    div.sec3__description-item
+                        img.sec3__description-img(src="img/svg/slide3-img6.svg", alt="")
+                        div.sec3__description-text-wrap
+                            span.sec3__description-text.sec3__description-text_bold.
+                                Спортивная обувь и кроссовки: 
+                            |Сохраняют комфорт и форму при любых нагрузках
+                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                    Ознакомиться с каталогом моделей
+        section.sec.sec4
+            div.container.sec4__container
+                p.heading.heading_m.sec4__heading.color-white.
+                    Снимите мерки в студии<br> или пригласите мастера к себе
+                div.info-window.sec4__info-window
+                    p.info-window__title.sec4__info-window-title.
+                        Индивидуальный пошив обуви происходит в 3 этапа:
+                    div.sec3__description-text-wrap.color-link.sec4__info-window-item
+                        span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                            1 
+                        span.sec3__description-text.sec3__description-text_bold.
+                            Снятие мерок 
+                        |для учета всех особенностей ноги
+                    div.sec3__description-text-wrap.color-link.sec4__info-window-item
+                        span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                            2 
+                        span.sec3__description-text.sec3__description-text_bold.
+                            Создание лекала 
+                        |для пошива обуви
+                    div.sec3__description-text-wrap.color-link.sec4__info-window-item
+                        span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
+                            3 
+                        span.sec3__description-text.sec3__description-text_bold.
+                            Выбор материала  
+                        |для верхней части обуви, подкладки и фурнитуры
+                    a.sec4__btn.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                        Записаться на снятие мерок
+        section.sec.sec5
+            div.container.sec5__container
+                p.heading.heading_m.sec5__heading.ta-center.
+                    Примерьте готовые туфли уже через 6 недель
+                div.row
+                    div.col.col_2
+                        img.sec5__icons.sec5__icons_pc(src="img/sec5-icons-pc.png", alt="")
+                        img.sec5__icons.sec5__icons_tablet(src="img/sec5-icons-tablet.png", alt="")
+                        img.sec5__icons.sec5__icons_mobile(src="img/sec5-icons-mobile.png", alt="")
+                        div.sec5__text-block.sec5__text-block_pc
+                            p.title.title_s.sec5__title.color-link.
+                                Тандем ремесленного мастерства лучших портных мира и современных технологий для создания произведения обувного искусства – вашей пары обуви
+                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                                Заказать пошив
+                    div.col.col_2
+                        div.sec5__img-container
+                            div.sec5__img-note.
+                                4.
+                            img(src="img/sec5-img.jpg", alt="").sec5__img
+                        div.sec5__text-block.sec5__text-block_mobile
+                            p.title.title_s.sec5__title.color-link.
+                                Тандем ремесленного мастерства лучших портных мира и современных технологий для создания произведения обувного искусства – вашей пары обуви
+                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                                Заказать пошив
+        section.sec.sec6
+            div.container.sec6__container
+                p.sec6__heading.heading.heading_m.ta-center.
+                    Закажите к своей паре обуви ремень из той же кожи и того же цвета
+                p.sec2__subtitle.sec6__subtitle.
+                    Создайте цельный образ
+            div.sec3__gallery-wrap
+                div.container.sec3__gallery-container
+                    div#sec6__gallery.sec3__gallery
+                        div.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/1.jpg", alt="")
+                        div.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/3.jpg", alt="")
+                        div.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/4.jpg", alt="")
+                        div.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/5.jpg", alt="")
+                        div.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/6.jpg", alt="")
+                    div#sec6__gallery-arrow-left.sec3__gallery-arrow.sec3__gallery-arrow_left
+                    div#sec6__gallery-arrow-right.sec3__gallery-arrow.sec3__gallery-arrow_right
+            div.container.ta-center
+                div.sec6__accesories
+                    img.sec6__accesories-img(src="img/svg/sec6-icon.svg", alt="")
+                    span.sec6__accesories-text.color-link.
+                        Также можете заказать перчатки и портмоне
+                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                    Заказать пошив аксессуаров
+        section.sec.sec7
+            div.container.sec7__container
+                p.heading.heading_xs.color-white.sec7__heading.ta-center.
+                    Посмотрите, насколько элегантно и&nbsp;стильно выглядит обувь TAILOR.ME
+                div.sec7__window-wrapper
+                    div.info-window.sec4__info-window
+                        div.sec7__gallery
+                            div.sec7__gallery-item
+                                p.sec7__gallery-heading.
+                                    Денис Андреев
+                                p.sec7__gallery-text.color-link.
+                                    Я в восторге от комфорта. В этой обуви хочется вершить великие дела. Отличная обувь, отличное качество, классно выглядит, очень нравится
+                            div.sec7__gallery-item
+                                p.sec7__gallery-heading.
+                                    Роман Галашов
+                                p.sec7__gallery-text.color-link.
+                                    Отличные туфли! Хорошая обувь всегда найдет своего покупателя
+                            div.sec7__gallery-item
+                                p.sec7__gallery-heading.
+                                    Вадим Кузнецов
+                                p.sec7__gallery-text.color-link.
+                                    Я шью обувь в этом ателье уже достаточно давно и много. Я могу выбирать любой материал, крокодил или не крокодил, любой цвет, здесь хорошо знают мою колодку.
+                        div.sec2__gallery-dots-wrap.sec7__gallery-dots-wrap
+                            div#sec7GalleryDots.sec2__gallery-dots
+                            div.sec2__gallery-numbers
+                                div.sec2__gallery-number.sec2__gallery-number-now.sec7__gallery-number-now.
+                                    1
+                                div.sec2__gallery-number.sec2__gallery-number-all.sec7__gallery-number-all
+        section.sec.sec9
+            div.container.sec9__container
+                p.sec9__heading.heading.heading_s.color-white.
+                    Пригласите портного или запишитесь на замер в студию
+                p.sec9__title.title.title_l.color-white.
+                    Выберите дату и удобное для вас время
+                form.sec9__form
+                    div.sec9__form-item.sec9__form-item_date
+                        label.sec9__form-label
+                            |Дата
+                            input.sec9__form-input.sec9__form-input_date(type="text" name="date" readonly="true")
+                        label.sec9__form-label
+                            |Время
+                            select.sec9__form-input.sec9__form-input_time(type="" name="time")
+                                option.sec9__form-option.
+                                    10:00-11:00
+                                option.sec9__form-option.
+                                    11:00-12:00
+                                option.sec9__form-option.
+                                    12:00-13:00
+                                option.sec9__form-option.
+                                    13:00-14:00
+                                option.sec9__form-option.
+                                    14:00-15:00
+                                option.sec9__form-option.
+                                    15:00-16:00
+                                option.sec9__form-option.
+                                    16:00-17:00
+                                option.sec9__form-option.
+                                    17:00-18:00
+                                option.sec9__form-option.
+                                    18:00-19:00
+                                option.sec9__form-option.
+                                    19:00-20:00
+                    div.sec9__form-item.sec9__form-item_info
+                        label.sec9__form-label
+                            |Ваше имя
+                            input.sec9__form-input(type="text" name="name")
+                        label.sec9__form-label
+                            |Телефон
+                            input.sec9__form-input.sec9__form-input_phone(type="text" name="phone")
+                div.sec9__btn-container
+                    button.sec9__btn.
+                        Записаться на снятие мерок
