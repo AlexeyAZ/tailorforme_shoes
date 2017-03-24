@@ -113,7 +113,7 @@
 
     &__gallery-wrap {
         position: absolute;
-        top: 0;
+        top: 25%;
         right: 0;
         max-width: 768px;
         margin-left: auto;
@@ -121,6 +121,7 @@
         z-index: 1;
 
         @include media(w1366) {
+            top: 0;
             max-width: 600px;
         }
 

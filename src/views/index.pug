@@ -6,12 +6,12 @@ block vars
 block content
     div#politicWindow.politic.
         Политика
-    div.modal-win.modal-win_form
+    div#modal-win-time.modal-win
         div.modal-win__container
             div.modal-win__close
             p.modal-win__heading.
-                Записаться на снятие мерок
-            form.modal-win__form
+                Записаться на замер
+            form#sendFormTime.modal-win__form
                 label.sec9__form-label.modal-win__label
                     |Дата
                     input.sec9__form-input.modal-win__input.modal-win__input_date(type="text" name="date" readonly="true")
@@ -46,7 +46,20 @@ block content
                     input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone")
                 button.modal-win__form-btn.
                     Записаться
-
+    div#modal-win-call.modal-win
+        div.modal-win__container
+            div.modal-win__close
+            p.modal-win__heading.
+                Заказать пошив
+            form#sendFormCall.modal-win__form
+                label.sec9__form-label.modal-win__label
+                    |Ваше имя
+                    input.sec9__form-input.modal-win__input(type="text" name="name")
+                label.sec9__form-label.modal-win__label
+                    |Телефон
+                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone")
+                button.modal-win__form-btn.
+                    Заказать
     div.content
         section.sec.intro
             div.video-container
@@ -72,7 +85,7 @@ block content
                     div.sec2__btn-container
                         p.title.title_s.sec2__title.color-link.
                             Ручная работа и использование<br> качественных материалов
-                        a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                        a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                             Заказать пошив
                     div.sec2__gallery-dots-wrap
                         div#sec2GalleryDots.sec2__gallery-dots
@@ -106,19 +119,25 @@ block content
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/1.jpg", alt="")
                         a.sec3__gallery-item(href="")
-                            img.sec3__gallery-img(src="img/slider2/2.jpg", alt="")
+                            img.sec3__gallery-img(src="img/slider2/22.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/3.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/11.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/44.jpg", alt="")
+                        a.sec3__gallery-item(href="")
+                            img.sec3__gallery-img(src="img/slider2/222.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/4.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/5.jpg", alt="")
                         a.sec3__gallery-item(href="")
-                            img.sec3__gallery-img(src="img/slider2/6.jpg", alt="")
+                            img.sec3__gallery-img(src="img/slider2/66.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/7.jpg", alt="")
                         a.sec3__gallery-item(href="")
-                            img.sec3__gallery-img(src="img/slider2/8.jpg", alt="")
+                            img.sec3__gallery-img(src="img/slider2/88.jpg", alt="")
                     div#sec3__gallery-arrow-left.sec3__gallery-arrow.sec3__gallery-arrow_left
                     div#sec3__gallery-arrow-right.sec3__gallery-arrow.sec3__gallery-arrow_right
             div.container.sec3__bottom-container
@@ -167,7 +186,7 @@ block content
                             span.sec3__description-text.sec3__description-text_bold.
                                 Спортивная обувь и кроссовки: 
                             |Сохраняют комфорт и форму при любых нагрузках
-                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                     Ознакомиться с каталогом моделей
         section.sec.sec4
             div.container.sec4__container
@@ -194,7 +213,7 @@ block content
                         span.sec3__description-text.sec3__description-text_bold.
                             Выбор материала  
                         |для верхней части обуви, подкладки и фурнитуры
-                    a.sec4__btn.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                    a.sec4__btn.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-time").
                         Записаться на снятие мерок
         section.sec.sec5
             div.container.sec5__container
@@ -208,7 +227,7 @@ block content
                         div.sec5__text-block.sec5__text-block_pc
                             p.title.title_s.sec5__title.color-link.
                                 Тандем ремесленного мастерства лучших портных мира и современных технологий для создания произведения обувного искусства – вашей пары обуви
-                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                                 Заказать пошив
                     div.col.col_2
                         div.sec5__img-container
@@ -218,40 +237,48 @@ block content
                         div.sec5__text-block.sec5__text-block_mobile
                             p.title.title_s.sec5__title.color-link.
                                 Тандем ремесленного мастерства лучших портных мира и современных технологий для создания произведения обувного искусства – вашей пары обуви
-                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                            a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                                 Заказать пошив
         section.sec.sec6
             div.container.sec6__container
                 p.sec6__heading.heading.heading_m.ta-center.
-                    Закажите к своей паре обуви ремень из той же кожи и того же цвета
+                    Закажите к своей паре обуви ремень из той же кожи и цвета
                 p.sec2__subtitle.sec6__subtitle.
                     Создайте цельный образ
             div.sec3__gallery-wrap
                 div.container.sec3__gallery-container
                     div#sec6__gallery.sec3__gallery
-                        div.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/1.jpg", alt="")
-                        div.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/3.jpg", alt="")
-                        div.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/4.jpg", alt="")
-                        div.sec3__gallery-item
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/11.jpg", alt="")
+                        a.sec3__gallery-item
                             img.sec3__gallery-img(src="img/slider3/5.jpg", alt="")
-                        div.sec3__gallery-item
+                        a.sec3__gallery-item
                             img.sec3__gallery-img(src="img/slider3/6.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/7.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/3.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/33.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/44.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/55.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/66.jpg", alt="")
                     div#sec6__gallery-arrow-left.sec3__gallery-arrow.sec3__gallery-arrow_left
                     div#sec6__gallery-arrow-right.sec3__gallery-arrow.sec3__gallery-arrow_right
             div.container.ta-center
                 div.sec6__accesories
                     img.sec6__accesories-img(src="img/svg/sec6-icon.svg", alt="")
                     span.sec6__accesories-text.color-link.
-                        Также можете заказать перчатки и портмоне
-                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="").
+                        А также можете заказать перчатки и портмоне
+                a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                     Заказать пошив аксессуаров
         section.sec.sec7
             div.container.sec7__container
                 p.heading.heading_xs.color-white.sec7__heading.ta-center.
-                    Посмотрите, насколько элегантно и&nbsp;стильно выглядит обувь TAILOR.ME
+                    Отзывы клиентов - лучший показатель качества обуви TAILOR.ME
                 div.sec7__window-wrapper
                     div.info-window.sec4__info-window
                         div.sec7__gallery
@@ -259,12 +286,12 @@ block content
                                 p.sec7__gallery-heading.
                                     Денис Андреев
                                 p.sec7__gallery-text.color-link.
-                                    Я в восторге от комфорта. В этой обуви хочется вершить великие дела. Отличная обувь, отличное качество, классно выглядит, очень нравится
+                                    Я в восторге от комфорта. В этой обуви хочется вершить великие дела. Отличная обувь, отличное качество, классно выглядит, очень нравится.
                             div.sec7__gallery-item
                                 p.sec7__gallery-heading.
                                     Роман Галашов
                                 p.sec7__gallery-text.color-link.
-                                    Отличные туфли! Хорошая обувь всегда найдет своего покупателя
+                                    Отличные туфли! Хорошая обувь всегда найдет своего покупателя.
                             div.sec7__gallery-item
                                 p.sec7__gallery-heading.
                                     Вадим Кузнецов
@@ -276,47 +303,48 @@ block content
                                 div.sec2__gallery-number.sec2__gallery-number-now.sec7__gallery-number-now.
                                     1
                                 div.sec2__gallery-number.sec2__gallery-number-all.sec7__gallery-number-all
-        section.sec.sec9
+        section#form-open.sec.sec9
             div.container.sec9__container
                 p.sec9__heading.heading.heading_s.color-white.
                     Пригласите портного или запишитесь на замер в студию
                 p.sec9__title.title.title_l.color-white.
                     Выберите дату и удобное для вас время
-                form.sec9__form
-                    div.sec9__form-item.sec9__form-item_date
-                        label.sec9__form-label
-                            |Дата
-                            input.sec9__form-input.sec9__form-input_date(type="text" name="date" readonly="true")
-                        label.sec9__form-label
-                            |Время
-                            select.sec9__form-input.sec9__form-input_time(type="" name="time")
-                                option.sec9__form-option.
-                                    10:00-11:00
-                                option.sec9__form-option.
-                                    11:00-12:00
-                                option.sec9__form-option.
-                                    12:00-13:00
-                                option.sec9__form-option.
-                                    13:00-14:00
-                                option.sec9__form-option.
-                                    14:00-15:00
-                                option.sec9__form-option.
-                                    15:00-16:00
-                                option.sec9__form-option.
-                                    16:00-17:00
-                                option.sec9__form-option.
-                                    17:00-18:00
-                                option.sec9__form-option.
-                                    18:00-19:00
-                                option.sec9__form-option.
-                                    19:00-20:00
-                    div.sec9__form-item.sec9__form-item_info
-                        label.sec9__form-label
-                            |Ваше имя
-                            input.sec9__form-input(type="text" name="name")
-                        label.sec9__form-label
-                            |Телефон
-                            input.sec9__form-input.sec9__form-input_phone(type="text" name="phone")
-                div.sec9__btn-container
-                    button.sec9__btn.
-                        Записаться на снятие мерок
+                form#formDateOpen(method="POST")
+                    div.sec9__form
+                        div.sec9__form-item.sec9__form-item_date
+                            label.sec9__form-label
+                                |Дата
+                                input.sec9__form-input.sec9__form-input_date(type="text" name="date" readonly="true")
+                            label.sec9__form-label
+                                |Время
+                                select.sec9__form-input.sec9__form-input_time(type="" name="time")
+                                    option.sec9__form-option.
+                                        10:00-11:00
+                                    option.sec9__form-option.
+                                        11:00-12:00
+                                    option.sec9__form-option.
+                                        12:00-13:00
+                                    option.sec9__form-option.
+                                        13:00-14:00
+                                    option.sec9__form-option.
+                                        14:00-15:00
+                                    option.sec9__form-option.
+                                        15:00-16:00
+                                    option.sec9__form-option.
+                                        16:00-17:00
+                                    option.sec9__form-option.
+                                        17:00-18:00
+                                    option.sec9__form-option.
+                                        18:00-19:00
+                                    option.sec9__form-option.
+                                        19:00-20:00
+                        div.sec9__form-item.sec9__form-item_info
+                            label.sec9__form-label
+                                |Ваше имя
+                                input.sec9__form-input(type="text" name="name")
+                            label.sec9__form-label
+                                |Телефон
+                                input.sec9__form-input.sec9__form-input_phone(type="text" name="phone")
+                    div.sec9__btn-container
+                        button.sec9__btn.
+                            Записаться на снятие мерок

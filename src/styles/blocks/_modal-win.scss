@@ -131,9 +131,16 @@
 
 .modal-win-show {
 	overflow: hidden;
-	
-	.modal-win {
-		opacity: 1;
-    	visibility: visible;
+}
+
+.modal-win_show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.disable-links {
+
+	.header, .footer {
+		pointer-events: none;
 	}
 }

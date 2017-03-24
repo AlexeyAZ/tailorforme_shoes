@@ -87,7 +87,7 @@ $(function () {
     }
 
     createFancybox($(".sec3__gallery-item"));
-    createFancybox($(".sec6__gallery-item"));
+    //createFancybox($(".sec6__gallery-item"));
 
     $("#openPoliticWindow").fancybox({});
 
@@ -276,16 +276,23 @@ $(function () {
 
     body.on("click", ".js-modal", function (e) {
         e.preventDefault();
-        var self = $(this);
-        var selfText = self.text();
 
-        if (self.hasClass("sec3__gallery-item")) {
-            $(".modal-win__heading").text("Записаться на замер");
-        } else {
-            $(".modal-win__heading").text(selfText);
+        if (!$(".thanks").length) {
+
+            var self = $(this);
+            var selfId = self.data("id");
+            var selfText = self.text();
+
+            $("#" + selfId).addClass("modal-win_show");
+            body.addClass("modal-win-show");
         }
+    });
 
-        body.addClass("modal-win-show");
+    body.on("click", function (e) {
+        if ($(e.target).hasClass("modal-win") && !$(e.target).hasClass("js-modal") && !$(e.target).hasClass("modal-win__form") || $(e.target).hasClass("modal-win__close")) {
+            $(".modal-win-show").removeClass("modal-win-show");
+            $(".modal-win_show").removeClass("modal-win_show");
+        }
     });
 
     body.on("click", function (e) {
@@ -293,6 +300,56 @@ $(function () {
             $(".modal-win-show").removeClass("modal-win-show");
         }
     });
+
+    // $(".modal-win__form").submit(function(e) {
+    //     e.preventDefault();
+    //     var self = $(this);
+    //     window.location = "thanks.html";
+
+    //     var name = self.find("input[name=name]").val();
+    //     localStorage.setItem("tailorname", name);
+    // });
+
+    // $(".modal-win__form-btn").on("click", function(e) {
+    //     e.preventDefault();
+
+    //     var self = $(this).closest("form");
+    //     window.location = "thanks.html";
+
+    //     var name = self.find("input[name=name]").val();
+    //     localStorage.setItem("tailorname", name);
+    //     body.addClass("modal-win-show");
+
+    //     if (name) {
+    //         $("#thanksName").text(name + ", ");
+    //     } else {
+    //         $("#thanksName").text("");
+    //     }
+    // });
+
+    $("#modal-win-time, #modal-win-call, #form-open").submit(function (e) {
+        //e.preventDefault();
+        window.location = "thanks.html";
+
+        var self = $(this);
+
+        var name = self.find("input[name=name]").val();
+        localStorage.setItem("tailorname", name);
+        body.addClass("modal-win-show");
+
+        if (name) {
+            $("#thanksName").text(name + ", ");
+        } else {
+            $("#thanksName").text("");
+        }
+    });
+
+    if ($(".thanks").length) {
+
+        if (localStorage.getItem("tailorname")) {
+            $("#thanksName").text(localStorage.getItem("tailorname") + ", ");
+        } else {}
+    };
 
     // video
     var videoContainer = $(".video-container");
