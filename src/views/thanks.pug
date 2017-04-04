@@ -1,7 +1,7 @@
 extends templates/layout
 
 block vars
-    - var title = 'Tailor For Me'
+    - var title = 'TAILOR for ME'
 
 block content
     div.content
@@ -12,9 +12,9 @@ block content
             include templates/header
             div.container
                 p.heading.heading_s.thanks__heading.
-                    <span id="thanksName"></span>наши менеджеры<br> уже занимаются вашей заявкой
+                    <span id="thanksName"></span><span id="thanksOur">наши</span> менеджеры<br> уже занимаются вашей заявкой
                 p.title.title_m.thanks__title.
-                    Мы постараемся связаться с вами в ближайшее время
+                    Мы свяжемся с вами в ближайшее время
                 p.title.title_s.thanks__subtitle.
                     График работы: с 9 00 до 18 00. Поэтому, если вы оставили заявку<br> в нерабочее время, мы перезвоним вам на следующий день
                 a.btn-ellipse.btn-ellipse_bg_white.thanks__btn(href="/shoes").

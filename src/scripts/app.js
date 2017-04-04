@@ -1,5 +1,33 @@
 $(function() {
 
+    webshim.setOptions('forms', {
+        //set lazyCustomMessages to true
+        lazyCustomMessages: true,
+        //show custom styleable validation bubble
+        replaceValidationUI: true
+    });
+
+    //start polyfilling
+    webshim.polyfill('forms');
+
+    function phoneLink() {
+        var md = new MobileDetect(window.navigator.userAgent);
+        var phoneLink = $(".phone-link");
+
+        if (md.mobile()) {
+            phoneLink.attr("href", "tel:" + $(".phone-link").data("phone"));
+            phoneLink.removeClass("js-modal");
+            phoneLink.attr("data-id", "");
+            console.log("mobile")
+        } else {
+            phoneLink.attr("href", "");
+            phoneLink.addClass("js-modal");
+            phoneLink.attr("data-id", "modal-win-call");
+            console.log("pc")
+        }
+    }
+    phoneLink();
+
     var body = $("body");
     var sec2Gallery = $(".sec2__gallery");
 
@@ -313,7 +341,8 @@ $(function() {
             var selfText = self.text();
 
             $("#" + selfId).addClass("modal-win_show");
-            body.addClass("modal-win-show");
+            $("html").addClass("modal-win-show");
+            body.css("overflow-y", "scroll");
         }
     });
 
@@ -356,7 +385,7 @@ $(function() {
     //     }
     // });
 
-    $("#modal-win-time, #modal-win-call, #form-open").submit(function(e) {
+    $("#modal-win-time, #modal-win-call").submit(function(e) {
         //e.preventDefault();
         window.location = "thanks.html";
 
@@ -370,6 +399,24 @@ $(function() {
             $("#thanksName").text(name + ", ");
         } else {
             $("#thanksName").text("");
+            $("#thanksOur").text("Наши");
+        }
+    });
+
+    $("#form-open").submit(function(e) {
+        //e.preventDefault();
+        window.location = "thanks.html";
+
+        var self = $(this);
+
+        var name = self.find("input[name=name]").val();
+        localStorage.setItem("tailorname", name);
+
+        if (name) {
+            $("#thanksName").text(name + ", ");
+        } else {
+            $("#thanksName").text("");
+            $("#thanksOur").text("Наши");
         }
     });
 
@@ -408,6 +455,7 @@ $(function() {
     });
 
     $(window).on("load", function() {
+        $(".preloader_active").removeClass("preloader_active");
         setSec8Size();
     });
 });

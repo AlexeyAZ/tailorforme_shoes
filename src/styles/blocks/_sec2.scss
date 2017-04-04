@@ -1,9 +1,9 @@
 .sec2 {
-    padding: 100px 0 20px;
+    padding: 50px 0 20px;
 
     @include media(w1024) {
         text-align: center;
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     @include media(w768) {
@@ -154,7 +154,7 @@
     }
 
     &__gallery-dots-wrap {
-        margin-top: 100px;
+        margin-top: 30px;
 
         @include media(w1024) {
             display: none;

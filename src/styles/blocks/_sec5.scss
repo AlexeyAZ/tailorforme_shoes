@@ -1,9 +1,8 @@
 .sec5 {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 70px;
 
     @include media (w768) {
-        padding-top: 50px;
         padding-bottom: 50px;
     }
 

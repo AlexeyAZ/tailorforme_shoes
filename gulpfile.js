@@ -16,6 +16,7 @@ var plugins = {
     'bower_components/air-datepicker/dist/js/datepicker.min.js',
     'bower_components/jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
     'bower_components/fancybox/dist/jquery.fancybox.min.js',
+    'bower_components/mobile-detect/mobile-detect.min.js',
   ],
   
   css: [

@@ -1,9 +1,9 @@
 .sec3 {
     background-color: $gray-bg;
-    padding: 100px 0;
+    padding: 50px 0;
 
     @include media(w1024) {
-        padding: 60px 0;
+        padding: 50px 0;
     }
 
     &__heading {
@@ -20,6 +20,10 @@
 
     &__title {
         margin-bottom: 40px;
+
+        @include media(w600) {
+            text-align: center;
+        }
     }
 
     &__quote {

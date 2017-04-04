@@ -1,8 +1,8 @@
 .sec6 {
     background-color: $gray-bg;
     overflow: hidden;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     @include media(w768) {
         padding-top: 40px;

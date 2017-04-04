@@ -1,7 +1,7 @@
 extends templates/layout
 
 block vars
-    - var title = 'Tailor For Me'
+    - var title = 'TAILOR for ME'
 
 block content
     div#politicWindow.politic.
@@ -13,10 +13,12 @@ block content
                 Записаться на замер
             form#sendFormTime.modal-win__form
                 label.sec9__form-label.modal-win__label
-                    |Дата
-                    input.sec9__form-input.modal-win__input.modal-win__input_date(type="text" name="date" readonly="true")
+                    span.
+                        Дата
+                    input.sec9__form-input.modal-win__input.modal-win__input_date(type="text" name="date" readonly="true" plac)
                 label.sec9__form-label.modal-win__label
-                    |Время
+                    span.
+                        Время
                     select.sec9__form-input.sec9__form-input_time.modal-win__input(type="" name="time")
                         option.sec9__form-option.
                             10:00-11:00
@@ -39,25 +41,29 @@ block content
                         option.sec9__form-option.
                             19:00-20:00
                 label.sec9__form-label.modal-win__label
-                    |Ваше имя
-                    input.sec9__form-input.modal-win__input(type="text" name="name")
+                    span.
+                        Телефон
+                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone" required="")
                 label.sec9__form-label.modal-win__label
-                    |Телефон
-                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone")
+                    span.
+                        Ваше имя
+                    input.sec9__form-input.modal-win__input(type="text" name="name" required="")
                 button.modal-win__form-btn.
                     Записаться
     div#modal-win-call.modal-win
-        div.modal-win__container
+        div.modal-win__container.modal-win__container_small
             div.modal-win__close
             p.modal-win__heading.
                 Заказать пошив
             form#sendFormCall.modal-win__form
                 label.sec9__form-label.modal-win__label
-                    |Ваше имя
-                    input.sec9__form-input.modal-win__input(type="text" name="name")
+                    div.
+                        Телефон
+                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone" required="")
                 label.sec9__form-label.modal-win__label
-                    |Телефон
-                    input.sec9__form-input.sec9__form-input_phone.modal-win__input(type="text" name="phone")
+                    div.
+                        Ваше имя
+                    input.sec9__form-input.modal-win__input(type="text" name="name" required="")
                 button.modal-win__form-btn.
                     Заказать
     div.content
@@ -71,8 +77,10 @@ block content
                     Пошив обуви
                 p.heading.heading_m.ta-center.color-white.intro__subheading.
                     по индивидуальным меркам
-                p.title.title_l.ta-center.color-white.
+                p.title.title_l.ta-center.color-white.intro__title.
                     С вниманием к каждой детали
+                a.btn-ellipse.btn-ellipse_bg_red.js-modal.intro__btn(href="" data-id="modal-win-call").
+                    Заказать пошив
                 div.intro__scroll-btn
                     img(src="img/svg/icon-mouse.svg", alt="")
         section.sec.sec2
@@ -112,7 +120,7 @@ block content
                 p.heading.heading_m.sec3__heading.ta-center.
                     Создайте собственную<br> пару обуви
                 p.title.title_s.color-link.sec3__title.
-                    Студия индивидуального пошива &laquo;TAILOR&nbsp;ME&raquo; воплотит любые ваши идеи. Выберите вместе с&nbsp;портным модель, цвет кожии материал. Более 1&nbsp;000 вариаций создания удобной обуви с&nbsp;использованием самых качественных материалов.
+                    Студия индивидуального пошива &laquo;TAILOR&nbsp;ME&raquo; воплотит любые ваши идеи. Выберите вместе с&nbsp;портным модель, цвет кожи и материал. Более 1&nbsp;000 вариаций создания удобной обуви с&nbsp;использованием самых качественных материалов.
             div.sec3__gallery-wrap
                 div.container.sec3__gallery-container
                     div#sec3__gallery.sec3__gallery
@@ -124,6 +132,8 @@ block content
                             img.sec3__gallery-img(src="img/slider2/3.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/11.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/11.jpg", alt="")
                         a.sec3__gallery-item(href="")
                             img.sec3__gallery-img(src="img/slider2/44.jpg", alt="")
                         a.sec3__gallery-item(href="")
@@ -146,7 +156,7 @@ block content
                         img.sec3__description-img(src="img/svg/slide3-img1.svg", alt="")
                         div.sec3__description-text-wrap
                             span.sec3__description-text.sec3__description-text_number.sec3__description-text_bold.
-                                36 
+                                47
                             span.sec3__description-text.sec3__description-text_bold.
                                 моделей: 
                             |от «Дерби» и «Оксфордов» до «Сникеров» и «Алгонкуин Бут»
@@ -249,15 +259,7 @@ block content
                 div.container.sec3__gallery-container
                     div#sec6__gallery.sec3__gallery
                         a.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/11.jpg", alt="")
-                        a.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/5.jpg", alt="")
-                        a.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/6.jpg", alt="")
-                        a.sec3__gallery-item
                             img.sec3__gallery-img(src="img/slider3/7.jpg", alt="")
-                        a.sec3__gallery-item
-                            img.sec3__gallery-img(src="img/slider3/3.jpg", alt="")
                         a.sec3__gallery-item
                             img.sec3__gallery-img(src="img/slider3/33.jpg", alt="")
                         a.sec3__gallery-item
@@ -266,13 +268,19 @@ block content
                             img.sec3__gallery-img(src="img/slider3/55.jpg", alt="")
                         a.sec3__gallery-item
                             img.sec3__gallery-img(src="img/slider3/66.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/5.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/6.jpg", alt="")
+                        a.sec3__gallery-item
+                            img.sec3__gallery-img(src="img/slider3/3.jpg", alt="")
                     div#sec6__gallery-arrow-left.sec3__gallery-arrow.sec3__gallery-arrow_left
                     div#sec6__gallery-arrow-right.sec3__gallery-arrow.sec3__gallery-arrow_right
             div.container.ta-center
                 div.sec6__accesories
                     img.sec6__accesories-img(src="img/svg/sec6-icon.svg", alt="")
                     span.sec6__accesories-text.color-link.
-                        А также можете заказать перчатки и портмоне
+                        А также вы можете заказать перчатки и портмоне
                 a.btn-ellipse.btn-ellipse_bg_red.js-modal(href="" data-id="modal-win-call").
                     Заказать пошив аксессуаров
         section.sec.sec7
@@ -340,11 +348,11 @@ block content
                                         19:00-20:00
                         div.sec9__form-item.sec9__form-item_info
                             label.sec9__form-label
-                                |Ваше имя
-                                input.sec9__form-input(type="text" name="name")
-                            label.sec9__form-label
                                 |Телефон
-                                input.sec9__form-input.sec9__form-input_phone(type="text" name="phone")
+                                input.sec9__form-input.sec9__form-input_phone(type="text" name="phone" required="")
+                            label.sec9__form-label
+                                |Ваше имя
+                                input.sec9__form-input(type="text" name="name" required="")
                     div.sec9__btn-container
                         button.sec9__btn.
                             Записаться на снятие мерок
