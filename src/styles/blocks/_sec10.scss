@@ -1,0 +1,58 @@
+.sec10 {
+    background-image: url("../img/sec9-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 160px;
+
+    @include media(w1024) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    @include media(w768) {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    &__container {
+        text-align: center;
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+    }
+
+    &__subtitle {
+        border-bottom: 2px solid white;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        margin-bottom: 60px;
+
+        @include media(w768) {
+			flex-direction: column;
+		}
+    }
+
+    &__form-label {
+        color: white;
+		font-family: "PTSerif", sans-serif;
+		font-size: 24px;
+        text-align: left;
+        width: calc(100% / 3);
+
+        @include media(w768) {
+			width: 100%;
+		}
+
+		// @include media(w600) {
+		// 	margin-bottom: 5px;
+		// 	font-size: 20px;
+		// 	width: 100%;
+		// }
+    }
+}

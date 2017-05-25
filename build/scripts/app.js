@@ -374,7 +374,7 @@ $(function () {
         }
     });
 
-    $("#form-open").submit(function (e) {
+    $("#form-open, #bottom-form-open").submit(function (e) {
         //e.preventDefault();
         window.location = "thanks.html";
 
